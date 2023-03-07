@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>studentInfo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <strong><label class="text-danger" id="msg"></label></strong>
+        <form action="#">
+            <table id="studentInfo" class="table table-striped table-bordered table-primary">
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Student Name</th>
+                        <th>Roll No.</th>
+                        <th>Month</th>
+                        <th>Room Charges</th>
+                        <th>Mess Charges</th>
+                        <th><button class="btn btn-success" onClick="addRow()">+</button></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+
+            <input type="button" class="btn btn-block btn btn-outline-success" value=" Download " onclick="downloadExcel()">
+            <input type="button" class="btn btn-block btn btn-outline-success" value=" Upload " onclick="uploadData()">
+            <input type="button" class="btn btn-block btn-outline-warning" value=" Sort Table " onclick="sortTable()">
+            <input type="button" class="btn btn-block btn btn-outline-primary" value=" Check For Duplicates " onclick="checkForDuplicates()">
+            <input type="button" class="btn btn-block btn-outline-info" value=" Search By Name " onclick="searchByName()">
+            <input type="button" class="btn btn-block btn-outline-info" value=" Search By Roll Number " onclick="searchByRollNumber()">
+            <input type="button" class="btn btn-block btn-outline-danger" value=" Clear Result " onclick="clearArray()">
+            
+            <br>
+            <div id="box"></div>
+        </form>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
